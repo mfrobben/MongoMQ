@@ -43,6 +43,7 @@ options
   * collectionSize   - The size in bytes to cap the collection at, defaults to 100000000
   * serverOptions    - An optional options object that will be passed to Mongo-Native when the Mongo connection is created
   * nativeParser     - Boolean (defaults false) to enable usage of Mongo-Native's native parser.  Only use this if you install mongodb with native support
+  * safeDriver		   - Boolean (defaults false) to enable safe mode in mongodb driver. Can be useful in test environments.
   * autoStart        - Boolean (defaults true) if the MongoMQ instance should start itself up when created, if set to false you need to call MongoMQ.start()
 
 MongoMQ.start([callback])
