@@ -27,11 +27,6 @@ What is MongoMQ?
 
 MongoMQ is a messaging queue built on top of Node.js and MongoDB's tailable cursors.  It allows for distributed of messages across workers in both a single reciever and broadcast method.
 
-What MongoMQ is NOT
-===================
-
-MongoMQ does NOT (currently) support callback's once a message is processed.  Instead it is recommended that you use a one time listener to pickup responses if this is required.
-
 Supported Methods
 =================
 
