@@ -257,6 +257,10 @@ How Events are stored
 
 Update History
 ==============
+v0.2.8
+  * Fixed several issues with variables used out of scope.
+  * Fixed race condition due to missing {safe : true} flag in insert before convertToCapped command.
+ 	* Improved error handling and checking during initial mongo connection and capped collection conversion.
 
 v0.2.7
   * Fixed a cursor leak when using passive callbacks
