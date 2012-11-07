@@ -33,18 +33,20 @@ Supported Methods
 new MongoMQ(options)
 --------------------
 options
-  * mqCollectionName - Collection to store queue messages in, defaults to 'queue'
-  * mqDB             - Database to store queue in, defaults to 'MongoMQ'
-  * username         - Optional value of the username to validate against Mongo with
-  * password         - Optional value of the password to validate against Mongo with
-  * server           - If not running against a ReplicaSet this is the server to connect to
-  * port             - If not running against a ReplicaSet this is the server port to connect with
-  * servers[]        - If connecting to a ReplicaSet then this is a collection of {host: 'hostname', port: 1234} objects defining the root entry for the ReplicaSet
-  * collectionSize   - The size in bytes to cap the collection at, defaults to 100000000
-  * serverOptions    - An optional options object that will be passed to Mongo-Native when the Mongo connection is created
-  * nativeParser     - Boolean (defaults false) to enable usage of Mongo-Native's native parser.  Only use this if you install mongodb with native support
-  * safeDriver		   - Boolean (defaults false) to enable safe mode in mongodb driver. Can be useful in test environments.
-  * autoStart        - Boolean (defaults true) if the MongoMQ instance should start itself up when created, if set to false you need to call MongoMQ.start()
+  * mqCollectionName 			- Collection to store queue messages in, defaults to 'queue'
+  * mqDB             			- Database to store queue in, defaults to 'MongoMQ'
+  * username         			- Optional value of the username to validate against Mongo with
+  * password         			- Optional value of the password to validate against Mongo with
+  * authenticateAgainstDb - Must be set if username and password are used as a client login (leave false if the username and password should be used to connect to the admindb)
+  * server           			- If not running against a ReplicaSet this is the server to connect to
+  * port             			- If not running against a ReplicaSet this is the server port to connect with
+  * servers[]        			- If connecting to a ReplicaSet then this is a collection of {host: 'hostname', port: 1234} objects defining the root entry for the ReplicaSet
+  * collectionSize   			- The size in bytes to cap the collection at, defaults to 100000000
+  * serverOptions    			- An optional options object that will be passed to Mongo-Native when the Mongo connection is created
+  * nativeParser     			- Boolean (defaults false) to enable usage of Mongo-Native's native parser.  Only use this if you install mongodb with native support
+  * safeDriver		   			- Boolean (defaults false) to enable safe mode in mongodb driver. Can be useful in test environments.
+  * autoStart        			- Boolean (defaults true) if the MongoMQ instance should start itself up when created, if set to false you need to call MongoMQ.start()
+
 
 MongoMQ.start([callback])
 -------------------------
